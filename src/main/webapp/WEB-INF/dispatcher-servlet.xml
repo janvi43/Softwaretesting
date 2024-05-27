@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+              	
+              	<mvc:annotation-driven />
+       	<context:component-scan base-package="com.Softwaretesting" />
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/views/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+    <bean id="modelImpl" class="com.Softwaretesting.Dao.modelImpl">
+ 
+</bean>
+<bean id="modelImplcustomer" class="com.Softwaretesting.Dao.modelImplcustomer"></bean>
+<bean id ="modelImplticketheader"  class="com.Softwaretesting.Dao.modelImplticketheader"></bean>
+<bean id="modelImplticketdetails" class="com.Softwaretesting.Dao.modelImplticketdetails"></bean>
+<bean id="modelImplsample" class="com.Softwaretesting.Dao.modelImplsample"></bean>
+<bean id ="modelImpllab" class="com.Softwaretesting.Dao.modelImpllab"></bean>
+<bean id="modelImpltestdetails" class="com.Softwaretesting.Dao.modelImpltestdetails"></bean>
+
+
+
+ <bean
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+		id="dataSource">
+		<property name="driverClassName"
+			value="com.mysql.jdbc.Driver"></property>
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/testing_soft"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="Sonam@231"></property>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hbm2ddl.auto">update</prop>
+				<prop key="show_sql">true</prop>
+			</props>
+		</property>
+		<property name="packagesToScan" value="com.Softwaretesting.Entity" />
+	
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+<tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>
+<context:annotation-config />
+       </beans>
