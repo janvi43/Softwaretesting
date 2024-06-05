@@ -1,17 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Dee Development - ${title}</title>
+<title>Dee Development - ${title }</title>
 </head>
 <body>
 
-<%@include file="header.jsp" %>
-<c:if test="${userclicksignform== true }">
+	<%@include file="header.jsp"%>
+
+	<c:if test="${userclicksignform == true }">
 		<%@include file="signform.jsp"%>
 	</c:if>
 
@@ -43,16 +43,20 @@
 		<c:if test="${userClickTicketheader== true }">
 		<%@include file="Ticketheader.jsp"%>userclickNewTicket
 	</c:if>
+		
+	
 		<c:if test="${userclickNewDetails== true }">
 		<%@include file="NewDetails.jsp"%>
 	</c:if>
 		<c:if test="${userClickticketdetails== true }">
 		<%@include file="ticketdetails.jsp"%>
 	</c:if>
+		
 		<c:if test="${userClickNewSample== true }">
 		<%@include file="NewSample.jsp"%>
 	</c:if>
-<c:if test="${userClickSample_test== true }">
+
+		<c:if test="${userClickSample_test== true }">
 		<%@include file="Sample_test.jsp"%>
 	</c:if>
 	<c:if test="${userClickNewlab== true }">
@@ -67,9 +71,10 @@
 	<c:if test="${userClicktest_details== true }">
 		<%@include file="test_details.jsp"%>
 	</c:if>
-	
+
 <c:if test="${userclickReport== true }">
 		<%@include file="Report.jsp"%>
 	</c:if>	
 </body>
 </html>
+    
