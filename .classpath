@@ -42,7 +42,7 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/tejva/Downloads/apache-tomcat-10.1.19-windows-x64/apache-tomcat-10.1.19/lib/servlet-api.jar">
+	<classpathentry exported="true" kind="lib" path="C:/Users/tejva/Downloads/apache-tomcat-10.1.19-windows-x64/apache-tomcat-10.1.19/lib/servlet-api.jar">
 		<attributes>
 			<attribute name="javadoc_location" value="https://jakarta.ee/specifications/servlet/6.0/apidocs/"/>
 		</attributes>

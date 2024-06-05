@@ -1,10 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
- <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.Softwaretesting.Dao.modelImplticketheader"%>
-<%@ page import ="com.Softwaretesting.Entity.ticketheader"%>
-
+<%@ page import="com.Softwaretesting.Entity.ticketheader"%>
 
 <!DOCTYPE html>
 <html>
@@ -20,5 +19,5 @@
         Name: <input type="text" name="Name"><br>
         <input type="submit" value="Generate Report">
     </form>
-    </body>
+</body>
 </html>

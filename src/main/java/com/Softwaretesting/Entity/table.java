@@ -1,19 +1,13 @@
 package com.Softwaretesting.Entity;
-
 import jakarta.persistence.Column;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-
 import jakarta.persistence.Table;
-
 @Entity
 @Table(name="admin", schema="testing_soft")
-
-public class table{
-	
+public class table{	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column
@@ -32,9 +26,6 @@ public class table{
 	String gender;
 	@Column
 	String specialization;
-
-	
-	
 	public table(int Id, String fullname, String email, String pwd, String cpwd, String photo,
 			String gender, String specialization) {
 		super();
