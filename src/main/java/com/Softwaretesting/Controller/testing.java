@@ -51,6 +51,7 @@ public class testing {
 		
 	}
 	@Autowired
+	
 	modelImplticketheader header;
 	public modelImplticketheader getheader() {
 		return header;
